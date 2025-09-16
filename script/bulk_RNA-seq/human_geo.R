@@ -9,7 +9,7 @@ library(Seurat)
 library(dplyr)
 dds <- readRDS("zenodo/human_Colon_raw_count_matrix.RDS")
 #----------------------- Generating dds object -----------------------------------
-meta_data <- read.csv('E://GVHD/example_bulk_RNA/human_Colon_raw_count_matrix_metainfo.csv',check.names = F)
+meta_data <- read.csv('zenodo/human_Colon_raw_count_matrix_metainfo.csv',check.names = F)
 rownames(meta_data) <- meta_data$sampleName
 dds <- DESeqDataSetFromMatrix(countData = count_matrix, colData = meta_data, design = ~ group)
 #keep <- rowSums(counts(dds)) >= 1
