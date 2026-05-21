@@ -13,7 +13,7 @@ mat <- mydata$block0_values
 rownames(mat) <- mydata$axis0
 colnames(mat) <- mydata$axis1
 mat <- CreateAssayObject(mat)
-meta <- read.csv("zenodo/sc_meta_Granucyte_4w_240422.csv", row.names = 1)
+meta <- read.csv("zenodo/sc_meta_Granucyte_4w_260521.csv", row.names = 1)
 rownames(meta) <- meta$barcode
 meta <- meta[colnames(mat),]
 sce <- CreateSeuratObject(mat,assay='RNA',meta.data=meta)
